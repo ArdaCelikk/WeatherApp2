@@ -6,11 +6,13 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 19px;
+    
 }
 
 .container{
     height: 100vh;
-    background-image: url("/img/smap-weather.jpg");
+    background-image: url("/img/kar.jpg");
+    filter: brightness(70%);
     background-size: 100% 100%;
 }
 
@@ -19,27 +21,33 @@
     width: 100%;
     padding: 30px 0 0 0;
     justify-content: center;
+
+    
 }
 
 .ust input{
     height: 27px;
     width: 350px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,0.3);
     border-radius: 25px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     padding: 0.7rem 1.5rem;
-    color: white;
+    color: white;   
+    outline: none;
 }
 .ust input::placeholder{
     color: white;
 }
+
 
 .orta{
     display: flex;
     width: 100%;
     justify-content: center;
     padding-top: 50px;
+    color: white;
+    
 }
 
 .box{
@@ -51,16 +59,15 @@
     gap: 1.5rem;
     border: 1px solid white;
     border-radius: 30px;
+    background-color: rgba(0, 0, 0,0.3);
 }
 
 .place{
-    color: white;
     font-size: 1.5rem;
     width: 100%;
 }
 
 .sicaklik{
-    color: white;
     border-top: 1px solid white;
     border-radius: 20px;
 }
@@ -88,7 +95,6 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    color: white;
     font-size: 1.2rem;
 }
 
