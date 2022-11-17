@@ -5,6 +5,14 @@ let ara=document.getElementById("txtAra")
 let backGroundImage= document.getElementById("bGround")
 let durum
 
+function durumImageLink(code) {
+    return "https://openweathermap.org/img/wn/"+code+".png"
+}
+
+function CountryFlag(short) {
+    return "https://countryflagsapi.com/png/"+short
+}
+
 
 
 const setQuery=(e)=>{
@@ -30,8 +38,8 @@ const display= (result)=> {
     let feels = document.querySelector(".feel")
     let humidity = document.querySelector(".humidity")
     let wind = document.querySelector(".windSpeed")
-    let paragraflar = document.querySelector(".parag")
-    let middle  = document.querySelector(".orta")
+    let flag = document.getElementById("flagImage")
+    let durumImage = document.getElementById("durumFoto")
 
 
     place.innerHTML=`${result.name}, ${result.sys.country}`
@@ -40,6 +48,13 @@ const display= (result)=> {
     feels.innerHTML=`${Math.round(result.main.feels_like)}°C <p>Feels Like</p>`
     humidity.innerHTML=`${result.main.humidity} % <p>Humidity</p>`
     wind.innerHTML=`${result.wind.speed}.m/s  <p>Wind Speed</p>`
+    // flag.src= flagLink(result.)
+    durumImage.src= durumImageLink(result.weather[0].icon)
+    flag.src=CountryFlag(result.sys.country)
+    
+
+
+
 
     switch(durum.innerHTML)
     {
@@ -74,11 +89,6 @@ const display= (result)=> {
             backGroundImage.style.background="url('/img/kar.jpg')"
             backGroundImage.style.backgroundSize="100% 100%"
             break;
-
-
-
-        
-
     }
     }
 const searcH = document.getElementById('txtAra')
